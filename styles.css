@@ -28,6 +28,10 @@ body {
 }
 
 /* ── NAV ── */
+html {
+    scroll-padding-top: 150px;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -71,8 +75,8 @@ nav {
 }
 
 .logo {
-    width: 85px;
-    height: 85px;
+    width: 110px;
+    height: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,7 +194,7 @@ nav {
     background: var(--off-white);
     position: relative;
     overflow: hidden;
-    padding: 8rem 2rem 4rem;
+    padding: 10rem 2rem 4rem;
     border-bottom: 1px solid var(--border);
 }
 
@@ -640,7 +644,7 @@ footer a {
 @media (max-width: 968px) {
     .nav-links {
         position: fixed;
-        top: 95px;
+        top: 124px;
         left: -100%;
         flex-direction: column;
         background: var(--white);
@@ -665,8 +669,8 @@ footer a {
     }
 
     .logo {
-        width: 70px;
-        height: 70px;
+        width: 92px;
+        height: 92px;
     }
 
     .contact-grid {
@@ -681,7 +685,7 @@ footer a {
 
 @media (max-width: 640px) {
     .hero {
-        padding: 6rem 1.5rem 3rem;
+        padding: 8rem 1.5rem 3rem;
     }
 
     .services-grid {
@@ -689,7 +693,11 @@ footer a {
     }
 
     .logo {
-        width: 60px;
-        height: 60px;
+        width: 76px;
+        height: 76px;
+    }
+
+    .nav-links {
+        top: 108px;
     }
 }
