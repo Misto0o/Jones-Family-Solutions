@@ -639,10 +639,18 @@ footer a {
         transition: left 0.3s ease;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
         border-top: 1px solid var(--border);
+        max-height: calc(100vh - 124px);
+        overflow-y: auto;
     }
 
     .nav-links.active {
         left: 0;
+    }
+
+    .dropdown-menu {
+        position: static;
+        margin-top: 0.5rem;
+        box-shadow: none;
     }
 
     .menu-toggle {
@@ -683,5 +691,6 @@ footer a {
 
     .nav-links {
         top: 108px;
+        max-height: calc(100vh - 108px);
     }
 }
