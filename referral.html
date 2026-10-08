@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Referral (Demo) | Jones Family Care Solutions LLC</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Crimson+Text:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-section">
+                <div class="logo">
+                    <img src="images/logo-300.webp" alt="Jones Family Care Solutions Logo">
+                </div>
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <span class="dropdown-toggle">Services ▾</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#our-services">All Services</a></li>
+                        <li><a href="index.html#afl">AFL</a></li>
+                        <li><a href="index.html#group-home">Group Home</a></li>
+                        <li><a href="index.html#community-network">Community Network</a></li>
+                        <li><a href="index.html#supportive-employment">Supportive Employment</a></li>
+                        <li><a href="index.html#its">ITS</a></li>
+                        <li><a href="homes.html">Homes</a></li>
+                        <li><a href="daySupport.html">Day Support (Coming Soon)</a></li>
+                    </ul>
+                </li>
+                <li><a href="referral.html">Make a Referral</a></li>
+                <li><a href="team.html">Join Our Team</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="form-page">
+        <div class="form-container">
+            <p class="demo-banner" role="note">Demo — nothing you enter is sent or saved.</p>
+
+            <p class="section-eyebrow">Referrals</p>
+            <h1 class="section-title">Make a Referral</h1>
+            <p class="form-intro">Looking for a job with us instead? <a href="apply.html">Apply online</a>.</p>
+
+            <!-- No name attributes: nothing can be submitted, even with JS off. -->
+            <form class="demo-form" autocomplete="off">
+                <fieldset>
+                    <legend>Placeholder fields until the referral packet arrives</legend>
+                    <p class="form-hint form-notice">Please don't include medical details.</p>
+
+                    <div class="form-group">
+                        <label for="referrer-name">Your name</label>
+                        <input type="text" id="referrer-name" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="referrer-phone">Your phone</label>
+                            <input type="tel" id="referrer-phone" required pattern="[0-9()+\-.\s]{7,20}" title="Phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="referrer-email">Your email</label>
+                            <input type="email" id="referrer-email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="relationship">Your relationship to the person</label>
+                        <input type="text" id="relationship" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="person-first-name">The person's first name</label>
+                        <input type="text" id="person-first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service of interest</label>
+                        <select id="service" required>
+                            <option value="">Select…</option>
+                            <option>AFL — Alternative Family Living</option>
+                            <option>Group Home</option>
+                            <option>Community Network</option>
+                            <option>Supportive Employment</option>
+                            <option>ITS — Individualized Tailored Supports</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-time">Preferred contact time</label>
+                        <input type="text" id="contact-time">
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="submit-btn">Submit Referral</button>
+                <p class="demo-message" role="status" hidden>Demo only — nothing was sent or saved.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Jones Family Care Solutions LLC — All Rights Reserved</p>
+        <p class="created-by">Created By Kristian Cook</p>
+    </footer>
+
+    <script src="js/team.js"></script>
+    <script src="js/demo-form.js"></script>
+</body>
+
+</html>

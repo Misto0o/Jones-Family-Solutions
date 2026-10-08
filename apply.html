@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employment Application (Demo) | Jones Family Care Solutions LLC</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Crimson+Text:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-section">
+                <div class="logo">
+                    <img src="images/logo-300.webp" alt="Jones Family Care Solutions Logo">
+                </div>
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <span class="dropdown-toggle">Services ▾</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#our-services">All Services</a></li>
+                        <li><a href="index.html#afl">AFL</a></li>
+                        <li><a href="index.html#group-home">Group Home</a></li>
+                        <li><a href="index.html#community-network">Community Network</a></li>
+                        <li><a href="index.html#supportive-employment">Supportive Employment</a></li>
+                        <li><a href="index.html#its">ITS</a></li>
+                        <li><a href="homes.html">Homes</a></li>
+                        <li><a href="daySupport.html">Day Support (Coming Soon)</a></li>
+                    </ul>
+                </li>
+                <li><a href="referral.html">Make a Referral</a></li>
+                <li><a href="team.html">Join Our Team</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="form-page">
+        <div class="form-container">
+            <p class="demo-banner" role="note">Demo — nothing you enter is sent or saved.</p>
+
+            <p class="section-eyebrow">Careers</p>
+            <h1 class="section-title">Employment Application</h1>
+            <p class="form-intro">Pages 1 and 2 of the JFCS employment application. Some forms are signed in person;
+                see <a href="#in-person">Forms completed in person at the office</a>. Want to refer someone instead?
+                <a href="referral.html">Make a referral</a>.</p>
+
+            <!-- No name attributes: nothing can be submitted, even with JS off. -->
+            <form class="demo-form" autocomplete="off">
+                <fieldset>
+                    <legend>Position</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="position">Position applied for</label>
+                            <input type="text" id="position" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="app-date">Date</label>
+                            <input type="date" id="app-date">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Applicant Information</legend>
+                    <div class="form-group">
+                        <label for="full-name">Full legal name</label>
+                        <input type="text" id="full-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city">
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state" maxlength="2" pattern="[A-Za-z]{2}" title="Two-letter state, e.g. NC">
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP</label>
+                            <input type="text" id="zip" inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" title="5-digit ZIP, e.g. 27455">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" required pattern="[0-9()+\-.\s]{7,20}" title="Phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="work-auth">Authorized to work in the United States?</label>
+                        <select id="work-auth" required>
+                            <option value="">Select…</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <fieldset class="check-group">
+                        <legend>Preferred employment</legend>
+                        <label><input type="checkbox"> Full-time</label>
+                        <label><input type="checkbox"> Part-time</label>
+                        <label><input type="checkbox"> As needed</label>
+                    </fieldset>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="start-date">Earliest start date</label>
+                            <input type="date" id="start-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="schedule">Desired schedule</label>
+                            <input type="text" id="schedule">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Availability</legend>
+                    <fieldset class="check-group">
+                        <legend>Mark days available</legend>
+                        <label><input type="checkbox"> Mon</label>
+                        <label><input type="checkbox"> Tue</label>
+                        <label><input type="checkbox"> Wed</label>
+                        <label><input type="checkbox"> Thu</label>
+                        <label><input type="checkbox"> Fri</label>
+                        <label><input type="checkbox"> Sat</label>
+                        <label><input type="checkbox"> Sun</label>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="hours">Hours / restrictions</label>
+                        <input type="text" id="hours">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Position Requirements and Experience</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="driver-license">Valid driver license (if position requires driving)</label>
+                            <select id="driver-license">
+                                <option value="">Select…</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="transportation">Reliable transportation for assigned shifts</label>
+                            <select id="transportation">
+                                <option value="">Select…</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Relevant experience supporting people with disabilities</label>
+                        <textarea id="experience"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="certifications">Current certifications (CPR, First Aid, medication training, etc.)</label>
+                        <textarea id="certifications"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Education</legend>
+                    <div class="form-group">
+                        <label for="education">Highest level completed / school</label>
+                        <input type="text" id="education">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Employment History</legend>
+                    <p class="form-hint">List your two most recent employers.</p>
+
+                    <fieldset class="sub-group">
+                        <legend>Employer 1</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="emp1-org">Employer / organization</label>
+                                <input type="text" id="emp1-org">
+                            </div>
+                            <div class="form-group">
+                                <label for="emp1-phone">Phone</label>
+                                <input type="tel" id="emp1-phone" pattern="[0-9()+\-.\s]{7,20}" title="Phone number">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="emp1-title">Job title</label>
+                                <input type="text" id="emp1-title">
+                            </div>
+                            <div class="form-group">
+                                <label for="emp1-dates">Dates worked</label>
+                                <input type="text" id="emp1-dates">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="emp1-supervisor">Supervisor</label>
+                            <input type="text" id="emp1-supervisor">
+                        </div>
+                        <div class="form-group">
+                            <label for="emp1-duties">Main duties</label>
+                            <textarea id="emp1-duties"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="sub-group">
+                        <legend>Employer 2</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="emp2-org">Employer / organization</label>
+                                <input type="text" id="emp2-org">
+                            </div>
+                            <div class="form-group">
+                                <label for="emp2-phone">Phone</label>
+                                <input type="tel" id="emp2-phone" pattern="[0-9()+\-.\s]{7,20}" title="Phone number">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="emp2-title">Job title</label>
+                                <input type="text" id="emp2-title">
+                            </div>
+                            <div class="form-group">
+                                <label for="emp2-dates">Dates worked</label>
+                                <input type="text" id="emp2-dates">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="emp2-supervisor">Supervisor</label>
+                            <input type="text" id="emp2-supervisor">
+                        </div>
+                        <div class="form-group">
+                            <label for="emp2-duties">Main duties</label>
+                            <textarea id="emp2-duties"></textarea>
+                        </div>
+                    </fieldset>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Professional References</legend>
+                    <p class="form-hint">Please list two people who can speak to your work. Do not list family members.</p>
+
+                    <fieldset class="sub-group">
+                        <legend>Reference 1</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ref1-name">Name</label>
+                                <input type="text" id="ref1-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="ref1-contact">Phone / email</label>
+                                <input type="text" id="ref1-contact">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ref1-relationship">Relationship / organization</label>
+                            <input type="text" id="ref1-relationship">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="sub-group">
+                        <legend>Reference 2</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ref2-name">Name</label>
+                                <input type="text" id="ref2-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="ref2-contact">Phone / email</label>
+                                <input type="text" id="ref2-contact">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ref2-relationship">Relationship / organization</label>
+                            <input type="text" id="ref2-relationship">
+                        </div>
+                    </fieldset>
+                </fieldset>
+
+                <button type="submit" class="submit-btn">Submit Application</button>
+                <p class="demo-message" role="status" hidden>Demo only — nothing was sent or saved.</p>
+            </form>
+
+            <div class="in-person" id="in-person">
+                <h2>Forms completed in person at the office</h2>
+                <p>These are signed on paper, in person, at our office. They are not collected online:</p>
+                <ul>
+                    <li>Applicant certification and signature</li>
+                    <li>Criminal History Disclosure (page 3 of the application)</li>
+                    <li>Background Report Disclosure and Authorization</li>
+                    <li>Hepatitis B vaccination form</li>
+                </ul>
+                <p><a href="docs/JFCS_Employment_Application_Criminal_Disclosure.pdf" target="_blank" rel="noopener">Paper
+                        employment application (PDF)</a></p>
+                <p><a href="docs/JFCS_Background_Report_Disclosure_Authorization.pdf" target="_blank"
+                        rel="noopener">Background report disclosure and authorization (PDF)</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Jones Family Care Solutions LLC — All Rights Reserved</p>
+        <p class="created-by">Created By Kristian Cook</p>
+    </footer>
+
+    <script src="js/team.js"></script>
+    <script src="js/demo-form.js"></script>
+</body>
+
+</html>

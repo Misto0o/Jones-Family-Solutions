@@ -1,0 +1,207 @@
+/* Shared by apply.html and referral.html (loaded after team.css) */
+.form-page {
+    padding: 10rem 2rem 5rem;
+    background: var(--off-white);
+    text-align: left;
+}
+
+.form-container {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.demo-banner {
+    background: #fff4d6;
+    border: 1px solid #e3c25c;
+    color: var(--charcoal);
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.form-intro {
+    text-align: center;
+    color: var(--text-muted);
+    margin: -2rem 0 2.5rem;
+}
+
+.form-intro a,
+.in-person a {
+    color: var(--teal);
+    font-weight: 600;
+}
+
+.demo-form fieldset {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    padding: 1.5rem 1.5rem 0.5rem;
+    margin-bottom: 1.5rem;
+    min-width: 0;
+}
+
+.demo-form legend {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--teal);
+    float: left;
+    width: 100%;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.demo-form legend + * {
+    clear: both;
+}
+
+.form-hint {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.form-notice {
+    font-weight: 600;
+    color: var(--charcoal);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.4rem;
+}
+
+.form-group label,
+.demo-form .check-group legend {
+    display: block;
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    font-family: 'Crimson Text', serif;
+    font-size: 1rem;
+    background: var(--white);
+    transition: border-color 0.2s ease;
+    color: var(--charcoal);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(26, 107, 107, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.demo-form .check-group,
+.demo-form .sub-group {
+    border: 0;
+    background: none;
+    padding: 0;
+    margin: 0 0 1.4rem;
+}
+
+.demo-form .sub-group legend {
+    font-size: 1.25rem;
+    padding: 0;
+    margin-bottom: 0.6rem;
+}
+
+.check-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-right: 1.2rem;
+    font-size: 1.05rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--teal);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    letter-spacing: 0.5px;
+    font-family: 'Crimson Text', serif;
+}
+
+.submit-btn:hover {
+    background: var(--teal-mid);
+}
+
+.demo-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--teal-pale);
+    border: 1px solid var(--teal-muted);
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--teal);
+}
+
+.in-person {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--teal);
+    border-radius: 10px;
+}
+
+.in-person h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    color: var(--charcoal);
+    margin-bottom: 0.8rem;
+}
+
+.in-person ul {
+    margin: 0.5rem 0 1rem 1.4rem;
+}
+
+@media (max-width: 968px) {
+    .form-page {
+        padding-top: 9rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .form-page {
+        padding: 8rem 1rem 4rem;
+    }
+
+    .demo-form fieldset {
+        padding: 1.2rem 1rem 0.3rem;
+    }
+}
