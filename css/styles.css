@@ -403,10 +403,6 @@ nav {
     color: var(--text-muted);
 }
 
-.service-card .details-pending {
-    font-style: italic;
-}
-
 .service-link {
     display: inline-block;
     margin-top: 1rem;
