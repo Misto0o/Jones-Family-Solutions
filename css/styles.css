@@ -403,6 +403,22 @@ nav {
     color: var(--text-muted);
 }
 
+.service-card .details-pending {
+    font-style: italic;
+}
+
+.service-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--teal);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
 .cql-badge {
     display: inline-block;
     margin-top: 1rem;
