@@ -419,19 +419,6 @@ nav {
     text-decoration: underline;
 }
 
-.cql-badge {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.35rem 0.9rem;
-    background: var(--teal-pale);
-    color: var(--teal);
-    font-size: 0.8rem;
-    font-weight: 600;
-    border-radius: 4px;
-    letter-spacing: 0.5px;
-    border: 1px solid var(--teal-muted);
-}
-
 /* ── CONTACT ── */
 .contact {
     padding: 6rem 2rem;
@@ -641,13 +628,6 @@ footer p {
 
 footer a {
     text-decoration: none;
-}
-
-.cql-footer {
-    color: var(--teal-light);
-    font-weight: 600;
-    margin-top: 1rem;
-    opacity: 1;
 }
 
 .created-by {
