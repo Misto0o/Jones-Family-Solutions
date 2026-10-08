@@ -182,7 +182,6 @@ nav {
 
 /* ── HERO ── */
 .hero {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     background: var(--off-white);
@@ -223,20 +222,6 @@ nav {
     }
 }
 
-.hero-eyebrow {
-    display: inline-block;
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--teal);
-    margin-bottom: 1rem;
-    padding: 0.3rem 1rem;
-    background: var(--teal-pale);
-    border-radius: 4px;
-    border: 1px solid var(--teal-muted);
-}
-
 .hero h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(2.8rem, 6vw, 5rem);
@@ -251,21 +236,6 @@ nav {
     font-weight: 700;
     color: var(--teal);
     display: block;
-}
-
-.hero-subtitle {
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
-    color: var(--text-muted);
-    margin-bottom: 1rem;
-    font-style: italic;
-}
-
-.hero-desc {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    max-width: 540px;
 }
 
 .cta-button {
@@ -287,23 +257,6 @@ nav {
     background: var(--teal-mid);
 }
 
-.hero-decoration {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 45%;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.hero-decoration img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
 /* ── SERVICES ── */
 .services-section {
     padding: 7rem 2rem;
@@ -313,48 +266,6 @@ nav {
 .services-container {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.section-eyebrow {
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--teal);
-    text-align: center;
-    margin-bottom: 0.6rem;
-}
-
-.section-eyebrow.light {
-    color: rgba(61, 184, 184, 0.9);
-}
-
-.section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 600;
-    color: var(--charcoal);
-    text-align: center;
-    margin-bottom: 3.5rem;
-    letter-spacing: 0.5px;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 48px;
-    height: 3px;
-    background: var(--teal);
-    margin: 0.8rem auto 0;
-    border-radius: 2px;
-}
-
-.section-title.light {
-    color: var(--white);
-}
-
-.section-title.light::after {
-    background: var(--teal-light);
 }
 
 .services-grid {
@@ -377,15 +288,12 @@ nav {
     border-top-color: var(--teal);
 }
 
-.service-card-header {
-    margin-bottom: 1.2rem;
-}
-
 .service-card h3 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.7rem;
     font-weight: 600;
     color: var(--teal);
+    margin-bottom: 1.2rem;
 }
 
 .service-card>p {
@@ -393,126 +301,6 @@ nav {
     color: var(--text-muted);
     line-height: 1.75;
     margin-bottom: 1.2rem;
-}
-
-.service-list {
-    list-style: none;
-    margin-bottom: 1.2rem;
-}
-
-.service-list li {
-    font-size: 1rem;
-    color: var(--text-muted);
-    padding: 0.3rem 0 0.3rem 1.2rem;
-    position: relative;
-}
-
-.service-list li::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: var(--teal);
-    font-weight: 600;
-}
-
-.service-ideal {
-    font-size: 1rem;
-    color: var(--teal);
-    background: var(--teal-pale);
-    border-left: 3px solid var(--teal);
-    padding: 0.7rem 1rem;
-    border-radius: 0 6px 6px 0;
-    margin-top: 0.5rem;
-}
-
-/* ── TESTIMONIALS ── */
-.testimonials-section {
-    padding: 7rem 2rem;
-    background: var(--teal);
-    position: relative;
-    overflow: hidden;
-}
-
-.testimonials-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 80% 20%, rgba(61, 184, 184, 0.15) 0%, transparent 50%);
-    pointer-events: none;
-}
-
-.testimonials-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.testimonial-card {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    padding: 2rem;
-    transition: background 0.3s ease;
-}
-
-.testimonial-card:hover {
-    background: rgba(255, 255, 255, 0.13);
-}
-
-.quote-mark {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 4.5rem;
-    line-height: 1;
-    color: var(--teal-light);
-    opacity: 0.5;
-    margin-bottom: -0.8rem;
-}
-
-.testimonial-text {
-    font-size: 1.05rem;
-    color: rgba(255, 255, 255, 0.88);
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    font-style: italic;
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.author-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--teal-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    color: var(--white);
-    font-size: 1rem;
-    flex-shrink: 0;
-}
-
-.testimonial-author strong {
-    display: block;
-    color: var(--white);
-    font-size: 1.05rem;
-}
-
-.testimonial-author span {
-    display: block;
-    font-size: 0.82rem;
-    color: rgba(255, 255, 255, 0.5);
 }
 
 /* ── FOOTER ── */
@@ -571,15 +359,7 @@ footer p {
         padding: 9rem 2rem 4rem;
     }
 
-    .hero-decoration {
-        display: none;
-    }
-
     .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .testimonials-grid {
         grid-template-columns: 1fr;
     }
 }
