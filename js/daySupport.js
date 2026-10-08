@@ -56,9 +56,3 @@ document.addEventListener('click', function (e) {
         document.querySelector('.dropdown-menu').classList.remove('open');
     }
 });
-
-function handleSubmit(e) {
-    e.preventDefault();
-    alert("Message sent! We'll be in touch soon.");
-    e.target.reset();
-}
