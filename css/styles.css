@@ -151,8 +151,33 @@
     margin: 0 auto;
 }
 
+/* Flex instead of grid so a short last row is centered. Column counts match the
+   300px auto-fit grid in base.css: 3 columns from 948px wide, 2 from 624px. */
+.services-container {
+    container-type: inline-size;
+}
+
 .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
+}
+
+.services-grid .service-card {
+    flex: 0 0 100%;
+}
+
+@container (min-width: 624px) {
+    .services-grid .service-card {
+        flex-basis: calc((100% - 1.5rem) / 2);
+    }
+}
+
+@container (min-width: 948px) {
+    .services-grid .service-card {
+        flex-basis: calc((100% - 3rem) / 3);
+    }
 }
 
 .service-link {
