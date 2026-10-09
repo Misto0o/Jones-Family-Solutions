@@ -4,6 +4,8 @@ document.querySelectorAll('.demo-form').forEach(function (form) {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         form.reset();
-        form.querySelector('.demo-message').hidden = false;
+        var message = form.querySelector('.demo-message');
+        message.textContent = 'Demo only — nothing was sent or saved. To reach JFCS, please call (336) 285-7238 or email jfcs0525@gmail.com.';
+        message.hidden = false;
     });
 });

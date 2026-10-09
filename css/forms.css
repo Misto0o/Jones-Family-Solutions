@@ -28,6 +28,7 @@
 }
 
 .form-intro a,
+.form-fallback a,
 .in-person a {
     color: var(--teal);
     font-weight: 600;
@@ -159,7 +160,8 @@
     background: var(--teal-mid);
 }
 
-.demo-message {
+.demo-message,
+.form-fallback {
     margin-top: 1rem;
     padding: 1rem;
     background: var(--teal-pale);
@@ -168,6 +170,10 @@
     text-align: center;
     font-weight: 600;
     color: var(--teal);
+}
+
+.form-fallback {
+    margin: 0 0 1.5rem;
 }
 
 .in-person {
