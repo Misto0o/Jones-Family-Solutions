@@ -118,8 +118,39 @@
 }
 
 .vision-container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.about-layout {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.about-layout .photo-figure {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+@media (min-width: 969px) {
+    .about-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .about-layout .vision-content {
+        text-align: left;
+    }
+
+    .vision .about-layout .cta-button {
+        margin: 0;
+    }
+
+    .about-layout .photo-figure {
+        max-width: none;
+    }
 }
 
 .vision-content {
