@@ -370,15 +370,16 @@ body {
         padding: 2rem;
         gap: 1.5rem;
         transition: left 0.3s ease;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
         border-top: 1px solid var(--border);
         max-height: calc(100vh - 124px);
         overflow-y: auto;
         text-align: center;
     }
 
+    /* Shadow only when open, so the parked menu doesn't shade the left edge. */
     .nav-links.active {
         left: 0;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     }
 
     .dropdown-menu {
