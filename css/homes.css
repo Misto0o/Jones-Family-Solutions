@@ -23,6 +23,8 @@
         justify-content: center;
         align-items: center;
         gap: 4rem;
+        /* Desktop nav is 143px tall; leave a 40px gap above the photo. */
+        padding-top: calc(143px + 40px);
     }
 
     .hero-figure {
