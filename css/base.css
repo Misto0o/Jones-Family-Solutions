@@ -145,6 +145,47 @@ footer p {
     opacity: 0.45;
 }
 
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 2rem;
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+    color: white;
+    opacity: 0.85;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Privacy, notice and terms pages: one readable column below the fixed nav (143px tall),
+   stretched so the footer sits at the bottom of short pages. */
+body:has(> .legal-page) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.legal-page {
+    flex: 1;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: calc(143px + 4rem) 2rem 5rem;
+}
+
+.legal-page p {
+    color: var(--text-muted);
+}
+
 html {
     scroll-padding-top: 150px;
 }
@@ -392,6 +433,10 @@ body {
         padding: 9rem 2rem 4rem;
     }
 
+    .legal-page {
+        padding-top: calc(125px + 3rem);
+    }
+
     .menu-toggle {
         display: flex;
     }
@@ -419,5 +464,9 @@ body {
 
     .hero {
         padding: 8rem 1.5rem 3rem;
+    }
+
+    .legal-page {
+        padding: calc(109px + 2.5rem) 1.5rem 4rem;
     }
 }
